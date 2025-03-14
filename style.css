@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #EBEFF2;
+    background: linear-gradient(to right ,#B2C2D1,#464C52);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 550px;
+}
+
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 750px;
+    height: 550px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#login-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #EBEFF2;
+    text-align: center;
+    border-radius: 7px;
+    width: 320px;
+    height: 480px;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#register-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #EBEFF2;
+    text-align: center;
+    border-radius: 7px;
+    width: 320px;
+    height: 520px;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+input{
+    width: 90%;
+    padding: 10px;
+    border-radius: 14px;
+    border: 0.3px solid #464C52;
+    background-color: #dfe6eb;
+
+}
+
+button{
+    border: 0.3px solid #464C52;
+    width: 65%;
+    padding: 7px;
+    border-radius: 14px;
+    border: 1px;
+    margin: 0 auto;
+    background-color: #c6d1db;
+    
+}
+button:hover{
+    background-color: #464C52;
+    color: #ffff;
+    transition: ease-in-out;
+    transition: 0.4s;
+}
+
+h2{
+    color: #464C52;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+ 
+}
+
+hr{
+    color: white;
+    width: 250px;
+
+}
+
+a{
+    text-decoration: none;
+    color: #679FFF;
+    font-size: 1rem;
+}
+
+.fa-brands{
+    color: #464C52;
+    font-size: 2rem;
+    border: 0.3px solid #87939E;
+    padding: 7px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.fa-brands:hover{
+    background-color: #464C52;
+    color: #EBEFF2;
+    transition: ease-in-out 0.4s;
+}
+
+.forget{
+    color: #464C52;
+    font-size: 1rem;
+}
+
+.success{
+    color: #0f5132;
+    background-color: #d1e7dd;
+    text-align: center;
+    text-decoration: none;
+}
+
+.success{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.error{
+    color: #cd3a44;
+    background-color: #d1e7dd;
+    text-align: center;
+    text-decoration: none;
+}
+
+.error{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.remember-forgot {
+    color: #464C52;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+}
+
+.remember-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    margin-left: 15px;
+}
+
+.forgot-password {
+    margin-left: auto; 
+    text-decoration: none; 
+    color: #464C52; 
+    margin-right: 20px;
+}
+
+.remember-container label {
+    white-space: nowrap; 
+}
+
+
+.forgot-password-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form inside the Forgot Password container */
+#forgot-password {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Style the heading */
+#forgot-password h2 {
+    text-align: center;
+    color: #464C52;
+    margin-bottom: 20px;
+}
+
+/* Style the input fields */
+#forgot-password input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style the button */
+#forgot-password button {
+    padding: 10px;
+    background-color: #c6d1db;
+    color: #464C52;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#forgot-password button:hover {
+    background-color: #464C52;
+    color: #ffff;
+    transition: ease-in-out;
+    transition: 0.4s;
+}
+
+/* Style error and success messages */
+#forgot-password p {
+    text-align: center;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+#forgot-password p.error {
+    color: red;
+}
+
+#forgot-password p.success {
+    color: green;
+}
