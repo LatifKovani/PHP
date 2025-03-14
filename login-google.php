@@ -2,14 +2,19 @@
 <?php
 session_start();
 require_once 'config.php';
-require_once 'vendor/autoload.php'; // Make sure to install Google API Client via Composer
+require_once 'vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$googleClientSecret = $_ENV['GOOGLE_CLIENT_SECRET'];
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Google API configuration
 $clientID = '850605513978-4qve63vc96d1ievl7mm6om58gsoapcrg.apps.googleusercontent.com';
-$clientSecret = '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';
+$clientSecret = $googleClientSecret;
 $redirectURL = 'http://localhost:84/PROJECT/callback.php'; // Replace with your actual domain
 
 // Creating a new Google client
