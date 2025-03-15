@@ -6,7 +6,7 @@
     ini_set('error_log', 'php_errors.log');
 
         include 'config.php';
-        include 'login-google.php';
+        include '/opt/lampp/htdocs/PROJECT/Google/login-google.php';
 
         //Nese ne session ka error ateher shfaq 
         if (isset($_SESSION['error'])) {
@@ -93,23 +93,21 @@
                     <input type="password" name="password" placeholder="Password" required>
 
                     <div class="remember-forgot">
+                      <!--  
                         <div class="remember-container">
                             <input type="checkbox" id="remember-me" class="remember-me" name="remember">
                             <label for="remember-me">Remember me</label>
                         </div>
+                        -->
                             <a href="/PROJECT/forgot-password/forgot-password.php" class="forgot-password">Forgot your Password?</a>
                     </div>
 
 
                     <button type="submit" value="submit" name="signin">Sign in</button>
                     
-                    
-                    
                     <div class="social-icons">
                         <a href="<?php echo $googleLoginUrl; ?>"><i class="fa-brands fa-google"></i></a>
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
                         <a href="#"><i class="fa-brands fa-github"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                     <p>Don't have an account? <a href="register.php" id="">Register</a></p>
                 </form>

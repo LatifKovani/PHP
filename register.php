@@ -6,7 +6,7 @@
 
     
     include 'config.php'; //Kjo e mundeson qe config.php(konektimi i databazes) te kete qasje ne kete file.
-    include 'register-google.php';
+    include '/opt/lampp/htdocs/PROJECT/Google/register-google.php';
     
     //Ky kusht funksion keshtu: nese kerkesa e serverit eshte me metoden POST atehere i merr ato te dhena me metoden POST. 
     if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['register'])) {
@@ -127,9 +127,7 @@
                 
                 <div class="social-icons">
                     <a href="<?php echo $googleRegisterUrl; ?>"><i class="fa-brands fa-google"></i></a>
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
                     <a href=""><i class="fa-brands fa-github"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
                 </div>
                 <p>Already have an account? <a href="login.php" id="">Login</a></p>
             </form>

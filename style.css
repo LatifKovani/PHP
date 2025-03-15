@@ -116,6 +116,7 @@ a{
 .fa-brands{
     color: #464C52;
     font-size: 2rem;
+    width: 130px;
     border: 0.3px solid #87939E;
     padding: 7px;
     margin: 3px;
@@ -161,6 +162,7 @@ a{
     transform: translateX(-50%);
 }
 
+/*
 .remember-forgot {
     color: #464C52;
     display: flex;
@@ -176,17 +178,21 @@ a{
     margin-left: 15px;
 }
 
-.forgot-password {
-    margin-left: auto; 
-    text-decoration: none; 
-    color: #464C52; 
-    margin-right: 20px;
-}
-
 .remember-container label {
     white-space: nowrap; 
 }
+*/
 
+.forgot-password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; 
+    color: #464C52;
+}
+.forgot-password:hover{
+    text-decoration: underline;
+}
 
 .forgot-password-container {
     max-width: 400px;
@@ -196,6 +202,7 @@ a{
     border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: red;
 }
 
 /* Style the form inside the Forgot Password container */

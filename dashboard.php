@@ -13,7 +13,7 @@ if (!isset($_SESSION['user_id'])) {
 <html>
 <head>
     <title>Dashboard</title>
-</head>
+</head> 
 <body>
     <h1>Welcome, <?php echo $_SESSION['name']; ?>!</h1>
     <p>Email: <?php echo $_SESSION['email']; ?></p>
