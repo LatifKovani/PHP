@@ -73,9 +73,7 @@
 
         }
 
-
-    ?>
-
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -109,7 +107,7 @@
                     
                     <div class="social-icons">
                         <a href="<?php echo $googleLoginUrl; ?>"><i class="fa-brands fa-google"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
                         <a href="#"><i class="fa-brands fa-github"></i></a>
                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
