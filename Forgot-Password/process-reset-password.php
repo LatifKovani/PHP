@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-include "../config.php";
+require __DIR__ . '/../config.php';
 
 date_default_timezone_set("Europe/Berlin");
 

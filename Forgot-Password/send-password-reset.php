@@ -2,11 +2,15 @@
 
  error_reporting(E_ALL);
  ini_set('display_errors', 1);
- include "../config.php";
+ require __DIR__ . '/../config.php';
 
 
-$email = trim($_POST['email']); //Kthen email e userit nga forma e dorezuar.
-$token = bin2hex(random_bytes(16)); //gjeneron 16 byte randome dhe bin2hex i konverton ne string hexadecimal.
+ $email = isset($_POST['email']) ? trim($_POST['email']) : '';
+
+ if (empty($email)) {
+     die("Email is required.");
+ }
+ $token = bin2hex(random_bytes(16)); //gjeneron 16 byte randome dhe bin2hex i konverton ne string hexadecimal.
 
 $token_hash = hash("sha256", $token); //Perdor sha256 algoritem per gjenerimin e 64 char hexadecimal string.
 
@@ -30,7 +34,7 @@ if ($check_stmt-> affected_rows > 0) {
       $mail->Subject = "Password Reset";
       $mail->isHTML(true);
       $mail->Body = <<<END
-      Click <a href="https://localhost/PROJECT/forgot-password/reset-password.php?token=$token">here</a>
+      Click <a href="Forgot-Password/reset-password.php?token=$token">here</a>
       to reset your password.
 
 

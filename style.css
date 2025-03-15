@@ -188,15 +188,15 @@ input.has-error {
     padding: 10px;
     border-radius: 5px;
     font-size: 0.9rem;
-    z-index: 1; 
+    z-index: 1; /* Ensure it appe */
 }
 
-/*
+
 .remember-forgot {
     color: #464C52;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: center;
     width: 100%;
 }
 
@@ -206,11 +206,6 @@ input.has-error {
     gap: 5px; 
     margin-left: 15px;
 }
-
-.remember-container label {
-    white-space: nowrap; 
-}
-*/
 
 .forgot-password {
     display: flex;
@@ -231,7 +226,7 @@ input.has-error {
     border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: red;
+    background-color: #EBEFF2   ;
 }
 
 /* Style the form inside the Forgot Password container */
@@ -287,4 +282,5 @@ input.has-error {
 
 #forgot-password p.success {
     color: green;
+}
 }

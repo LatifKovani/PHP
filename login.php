@@ -99,7 +99,7 @@
                             <label for="remember-me">Remember me</label>
                         </div>
                         -->
-                            <a href="/PROJECT/forgot-password/forgot-password.php" class="forgot-password">Forgot your Password?</a>
+                            <a href="Forgot-Password/forgot-password.php" class="forgot-password">Forgot your Password?</a>
                     </div>
 
 

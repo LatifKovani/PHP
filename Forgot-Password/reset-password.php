@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-include "../config.php";
+require __DIR__ . '/../config.php';
 
 date_default_timezone_set("Europe/Berlin");
 
@@ -44,7 +44,7 @@ if (strtotime($user['reset_token_expires_at']) <= time()) {
 <body>
 <div class="container">
         <div class="forgot-password-container" >
-            <form action="/PROJECT/forgot-password/process-reset-password.php" method="POST" id="forgot-password">
+            <form action="Forgot-Password/process-reset-password.php" method="POST" id="forgot-password">
                 <h2>Forgot Password</h2>
                 <input type="hidden" name="token" value="<?= htmlspecialchars($token)?>">
                 <input type="password" name="password" placeholder="Enter your Password" required>
