@@ -1,5 +1,4 @@
-    <?php
-
+<?php
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
     ini_set('log_errors', 1);
@@ -7,7 +6,7 @@
 
         include 'config.php';
         include '/opt/lampp/htdocs/PROJECT/Google/login-google.php';
-
+        
         //Nese ne session ka error ateher shfaq 
         if (isset($_SESSION['error'])) {
             echo "<p class='error'>" . $_SESSION['error'] . "</p>";
@@ -39,11 +38,14 @@
         $stmt->store_result();
         $stmt->bind_result($ID, $name,$lname, $email, $hashed_password);
         $stmt->fetch();
-
+        
         if ($stmt->num_rows > 0 && password_verify($password, $hashed_password)) {
             $_SESSION['user_id'] = $ID;
             $_SESSION['user_name'] = $name;
             $_SESSION['user_email'] = $email;
+            
+            header("Location: dashboard.php");
+            exit();
             /*
             if ($remember) {
                 $token = bin2hex(random_bytes(64));  //Gjenero nje token te sigurt.
@@ -61,8 +63,6 @@
                     </script>";
             }
                 */
-            header("Location: dashboard.php");
-            exit();
         }else {
             $_SESSION['error'] = "Invalid email or password!";
             header("Location: login.php");
@@ -114,4 +114,4 @@
             </div>
         </div>
     </body>
-</html>
+</html> 

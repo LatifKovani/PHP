@@ -148,18 +148,47 @@ a{
     transform: translateX(-50%);
 }
 
-.error{
-    color: #cd3a44;
-    background-color: #d1e7dd;
-    text-align: center;
-    text-decoration: none;
+.error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+    font-weight: 500;
+    text-align: left;
+    padding: 0 5px;
+}
+
+
+/* Style for input fields with errors */
+input.has-error {
+    border: 1px solid #e74c3c;
+    box-shadow: 0 0 3px rgba(231, 76, 60, 0.5);
+}
+
+/* Make sure error messages stand out from the background */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group .error {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
 }
 
 .error{
     position: absolute;
-    top: 20px;
+    top: 80px; /* Position at the top of the form */
     left: 50%;
     transform: translateX(-50%);
+    width: 90%; /* Ensure it fits within the form */
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    z-index: 1; 
 }
 
 /*

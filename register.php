@@ -50,7 +50,10 @@
 
         //Nese numri i rreshtave ne db eshte me i madh se 1, atehere do te thote qe kjo email eshte e regjistruar dhe kthen error mesazhin.
         if ($check_stmt->num_rows > 0) {
-            $errors[] = "Email is already registered!";
+            $_SESSION['error'] = "Email is already registered!";
+            session_write_close();
+            header("Location: login.php");
+            exit();
         }
 
         
