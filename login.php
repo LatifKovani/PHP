@@ -104,10 +104,18 @@
 
 
                     <button type="submit" value="submit" name="signin">Sign in</button>
-                    
+
+                    <div class="hr-container">
+                        <hr class="hr-line">
+                        <span class="hr-text">Or</span>
+                        <hr class="hr-line">
+                    </div>
+
                     <div class="social-icons">
-                        <a href="<?php echo $googleLoginUrl; ?>"><i class="fa-brands fa-google"></i></a>
-                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="<?php echo $googleLoginUrl; ?>" class="google-signin"><i class="fa-brands fa-google"></i>  
+                        <span class="sign-in">Sign in with Google</span>
+                    </a>
+                        
                     </div>
                     <p>Don't have an account? <a href="register.php" id="">Register</a></p>
                 </form>

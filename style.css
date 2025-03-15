@@ -117,9 +117,8 @@ a{
     color: #464C52;
     font-size: 2rem;
     width: 130px;
-    border: 0.3px solid #87939E;
-    padding: 7px;
-    margin: 3px;
+    padding: 5px;
+
     border-radius: 10px;
 }
 
@@ -127,6 +126,31 @@ a{
     background-color: #464C52;
     color: #EBEFF2;
     transition: ease-in-out 0.4s;
+}
+.google-signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000;
+    
+}
+
+.sign-in{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+.sign-in:hover{
+    background-color: #464C52;
+    color: #EBEFF2;
+    transition: ease-in-out 0.4s;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .forget{
@@ -282,4 +306,22 @@ input.has-error {
 
 #forgot-password p.success {
     color: green;
+}
+
+.hr-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hr-line{
+    width: 123px;
+    flex: 1;
+    border: none;
+    border-top: 1px solid #87939E;
+    margin: 0 10px;
+}
+
+.hr-text{
+    color: #464C52;
 }
