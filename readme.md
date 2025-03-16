@@ -34,3 +34,21 @@ return $mail <!-- e kthen PHPMailer tkonfigurar e cila mund te perdoret ne scrip
 $_POST['code'] <!-- Google dergon nje autorizim kod si query ne redirect URL.
 fetchAccessTokenWithAuthCode() <!--Nderron kodin e autorizim per nje token te aksesueshem.
 setAccessToken(): <!-- Sets the access token in the Google client for subsequent API requests.
+
+            <!-- RememerMe.php --->
+                if ($remember) {
+                $token = bin2hex(random_bytes(64));  //Gjenero nje token te sigurt.
+                $hashed_token = password_hash($token, PASSWORD_DEFAULT); //Enkripto para se te ruaj
+                $expiry = date('Y-m-d H:i:s', time() + (30 * 24 * 60 * 60)); //Tokeni skadon per 30 dite.
+
+                //Ruaje tokenin ne databaze
+                $stmt = $conn->prepare("UPDATE users SET remember_token = ?, token_expiry = ? WHERE ID = ?");
+                $stmt->bind_param("ssi", $hashed_token, $expiry, $ID);
+                $stmt->execute();
+
+                //Ruaje tokenin
+                echo "<script>
+                    <localStorage.setItem('remember_token', '$token');
+                    </script>";
+            }
+        

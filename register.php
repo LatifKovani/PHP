@@ -127,11 +127,18 @@
                 <input type="password" name="password" placeholder="Password" required>
                 <button type="submit" value="submit" name="register">Sign up</button>
                 
-                
-                <div class="social-icons">
-                    <a href="<?php echo $googleRegisterUrl; ?>"><i class="fa-brands fa-google"></i></a>
-                    <a href=""><i class="fa-brands fa-github"></i></a>
-                </div>
+                <div class="hr-container">
+                        <hr class="hr-line">
+                        <span class="hr-text">Or</span>
+                        <hr class="hr-line">
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="<?php echo $googleRegisterUrl; ?>" class="google-signin"><i class="fa-brands fa-google"></i>  
+                        <span class="sign-in">Sign in with Google</span>
+                    </a>
+                        
+                    </div>
                 <p>Already have an account? <a href="login.php" id="">Login</a></p>
             </form>
         </div>

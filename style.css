@@ -204,7 +204,7 @@ input.has-error {
 
 .error{
     position: absolute;
-    top: 80px; /* Position at the top of the form */
+    top: 60px; /* Position at the top of the form */
     left: 50%;
     transform: translateX(-50%);
     width: 90%; /* Ensure it fits within the form */

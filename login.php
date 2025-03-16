@@ -46,23 +46,7 @@
             
             header("Location: dashboard.php");
             exit();
-            /*
-            if ($remember) {
-                $token = bin2hex(random_bytes(64));  //Gjenero nje token te sigurt.
-                $hashed_token = password_hash($token, PASSWORD_DEFAULT); //Enkripto para se te ruaj
-                $expiry = date('Y-m-d H:i:s', time() + (30 * 24 * 60 * 60)); //Tokeni skadon per 30 dite.
-
-                //Ruaje tokenin ne databaze
-                $stmt = $conn->prepare("UPDATE users SET remember_token = ?, token_expiry = ? WHERE ID = ?");
-                $stmt->bind_param("ssi", $hashed_token, $expiry, $ID);
-                $stmt->execute();
-
-                //Ruaje tokenin
-                echo "<script>
-                    <localStorage.setItem('remember_token', '$token');
-                    </script>";
-            }
-                */
+    
         }else {
             $_SESSION['error'] = "Invalid email or password!";
             header("Location: login.php");
@@ -89,16 +73,10 @@
                 <form action="" method="POST" id="login-form">
                     <h2>Sign in</h2>
                     <hr>
-                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="email" name="email" placeholder="Email" required >
                     <input type="password" name="password" placeholder="Password" required>
 
-                    <div class="remember-forgot">
-                      <!--  
-                        <div class="remember-container">
-                            <input type="checkbox" id="remember-me" class="remember-me" name="remember">
-                            <label for="remember-me">Remember me</label>
-                        </div>
-                        -->
+                    <div class="forgot">
                             <a href="Forgot-Password/forgot-password.php" class="forgot-password">Forgot your Password?</a>
                     </div>
 
